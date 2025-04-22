@@ -1,161 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans:ital,wght@0,400;0,400;0,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Beiruti:ital,wght@0,400;0,400" rel="stylesheet" />
-<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UVEC Event Page</title>
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:ital,wght@0,400;0,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Beiruti:ital,wght@0,400;0,400" rel="stylesheet" />
+  <style>
+    body {
+      text-align: center;
+      background-color: #cfd7d8;
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+    }
+    .main-display {
+      margin: 1rem;
+    }
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+      border-radius: 5px;
+    }
+    .logo img {
+      height: 50px;
+    }
+    .social-icons a {
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      width: 30px;
+      filter: grayscale(100%) brightness(0.8);
+      transition: filter 0.3s ease;
+    }
+
+    .social-icons:hover a {
+      filter: sepia(100%) saturate(500%) hue-rotate(190deg) brightness(1.1);
+    }
+
+    .social-button img{
+      max-width: 30px;
+    }
+
+    .font-main {
+      font-family: "DM Sans", sans-serif;
+    }
+    .font-alt {
+      font-family: "Beiruti", serif;
+    }
+
+    .email-button {
+      display: inline-block;
+      background-color: #065f9f;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: "DM Sans", sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .email-button:hover {
+      background-color: #005fa3;
+    }
+
+    .info-cards {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: 1rem auto;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: rgba(149, 157, 165, 0.228) 0px 8px 24px;
+      width: 80%;
+      max-width: 600px;
+      margin: 1rem auto;
+      padding: 1rem;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    hr.divider {
+      border: none;
+      height: 3px;
+      background-color: #999;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 600px) {
+      .info-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 800px) {
+      #recycling-img {
+        content: url("resources/min-email.webp");
+      }
+      #sunglass-img {
+        content: url("resources/min-sunglass.webp");
+      }
+    }
+  </style>
 </head>
 <body>
   <section class="main-display">
     <header class="site-header">
       <div class="logo">
-        <img src="resources/logo.png" "Utah Valley Eye Center Logo" />
+        <img src="resources/logo.png" alt="Utah Valley Eye Center Logo" />
       </div>
       <div class="social-icons">
-        <sl-icon-button name="facebook" label="Facebook" href="https://www.facebook.com/UtahValleyEyeCenter" target="_blank"></sl-icon-button>
-        <sl-icon-button name="instagram" label="Instagram" href="https://www.instagram.com/UtahValleyEyeCenter" target="_blank"></sl-icon-button>
-        <sl-icon-button name="tiktok" label="TikTok" href="https://www.instagram.com/UtahValleyEyeCenter" target="_blank"></sl-icon-button>
+        <a class="social-button" href="https://www.facebook.com/UtahValleyEyeCenter" target="_blank"><img src="https://raw.githubusercontent.com/kjirstenhernandez/email-template/refs/heads/main/resources/facebook.png"></a>
+        <a class="social-button" href="https://www.instagram.com/UtahValleyEyeCenter" target="_blank"><img src="https://github.com/kjirstenhernandez/email-template/blob/main/resources/instagram.png?raw=true"></a>
+        <a class="social-button" href="https://www.tiktok.com/@UtahValleyEyeCenter" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3116/3116491.png"></a>
       </div>
     </header>
+
     <section class="font-main" style="background-color: white; margin: 1rem auto; border-radius: 5px; padding: 3rem;">
       <h3 style="text-align: center;">Celebrate Earth Week with Us — Plus, Our Annual Sunglass Show Starts May 1st! </h3>
-      <h3 class="font-alt">Major events are happening at Utah Valley Eye Center!  Between this week and next we have our big Earth Day Recycling Contest, as well as the start to our annual Sunglass show!  Read the details below, or contact us for any questions!</h3>
+      <h3 class="font-alt">Major events are happening at Utah Valley Eye Center! Between this week and next we have our big Earth Day Recycling Contest, as well as the start to our annual Sunglass show! Read the details below, or contact us for any questions!</h3>
       <a href="mailto:utahvalleyeyecenter@gmail.com" class="email-button">Email Us</a>
     </section>
-    <section class="info-cards" style="background-color: white; margin: 1rem auto; border-radius: 5px;">
-        <sl-card style="width: 80%; border-radius: 5px; margin: 1rem;" class="card-image shadow-1">
-          <img
-            id="recycling-img"
-            slot="image"
-            src=resources/Email.webp
-            alt="Used contact lens materials being funneled through a tube and converted into a plant"
-          />
-          <section>
-            <h1 class="font-main">Join Our Contest to Celebrate Earth Week!</h1>
-            <h3 class="font-alt">Raffle winner receives a garden gift basket from Olsen's Greenhouse and Garden Shoppe</h3>
-          </section>
-          <section class="font-alt" style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium quisquam asperiores corporis nisi repellendus sequi non nihil consequatur molestiae nostrum incidunt, iusto laborum quo similique quaerat qui. Esse, ducimus.</section>
-        </sl-card>
-        <sl-card style="width: 80%; border-radius: 5px; margin: 1rem;" class="card-image shadow-1">
-          <img
-            id="sunglass-img"
-            slot="image"
-            src=resources/sunglass.webp
-            alt="Used contact lens materials being funneled through a tube and converted into a plant"
-          />
-          <section>
-            <h1 class="font-main">Our Annual Sunglass Show Starts Next Week!</h1>
-            <h3 class="font-alt">30% off sunglasses for the Enitre Month of May</h3>
-          </section>
-          <section class="font-alt" style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium quisquam asperiores corporis nisi repellendus sequi non nihil consequatur molestiae nostrum incidunt, iusto laborum quo similique quaerat qui. Esse, ducimus.</section>
-        </sl-card>
-      </section>
+
+    <section class="info-cards">
+      <div class="card">
+        <img id="recycling-img" src="resources/Email.webp" alt="Used contact lens materials being funneled through a tube and converted into a plant" />
+        <h1 class="font-main">Join Our Contest to Celebrate Earth Week!</h1>
+        <h3 class="font-alt">Raffle winner receives a garden gift basket from Olsen's Greenhouse and Garden Shoppe</h3>
+        <p class="font-alt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium quisquam asperiores corporis nisi repellendus sequi non nihil consequatur molestiae nostrum incidunt, iusto laborum quo similique quaerat qui. Esse, ducimus.</p>
+      </div>
+
+      <div class="card">
+        <img id="sunglass-img" src="resources/sunglass.webp" alt="Sunglasses promo" />
+        <h1 class="font-main">Our Annual Sunglass Show Starts Next Week!</h1>
+        <h3 class="font-alt">30% off sunglasses for the Entire Month of May</h3>
+        <p class="font-alt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium quisquam asperiores corporis nisi repellendus sequi non nihil consequatur molestiae nostrum incidunt, iusto laborum quo similique quaerat qui. Esse, ducimus.</p>
+      </div>
+    </section>
   </section>
-      
-  <sl-divider style="--width: 3px"></sl-divider>
 
-  <style>
-    body {
-      text-align: center;
-      background-color: #cfd7d8;
-    }
-    .main-display{
-      /* display: flex;
-      justify-content: center; */
-      margin: 1rem;
-    }
-    .card-image {
-      max-width: 600px;
-    }
-    .card-main {
-      display: flex;
-      align-items: space-between;
-    }
-
-    .shadow-1{
-      box-shadow: rgba(149, 157, 165, 0.228) 0px 8px 24px;
-    }
-    
-    .info-cards {
-      display: flex;
-      justify-content: flex-start;
-    }
-    .site-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: white;
-    border-radius: 5px;
-  }
-
-  .logo img {
-    height: 50px;
-  }
-
-  .social-icons a {
-    display: flex;
-    color: #333333;
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-  }
-
-  .social-icons a:hover {
-    color: #0077cc;
-  }
-
-  .email-button {
-  display: inline-block;
-  background-color: #065f9f;
-  color: white;
-  padding: 0.60rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: semi-bold;
-  font-family: "DM Sans", sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.email-button:hover {
-  background-color: #005fa3;
-}
-    
-    @media (max-width: 600px) {
-             .info-cards {
-              flex-direction: column;
-              align-items: center;
-             }
-         }
-
-    @media (max-width: 800px){
-        #recycling-img {
-          content: url("resources/min-email.webp")
-        }
-        #sunglass-img {
-          content: url("resources/min-sunglass.webp")
-        }
-    }
-    
-    .text-center {
-      text-align: center;
-    }
-
-    .font-main {
-      font-family: "DM Sans";
-    }
-
-    .font-alt {
-      font-family: "Beiruti"
-    }
-
-    @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 400; src: url('https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRR23w.woff') format('woff'), url('https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRR232.woff2') format('woff2'); } @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 700; src: url('https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZtRR23w.woff') format('woff'), url('https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZtRR232.woff2') format('woff2'); } @font-face { font-family: 'Beiruti'; font-style: normal; font-weight: 400; src: url('https://fonts.gstatic.com/s/beiruti/v4/JTUIjIU69Cmr9FGcYgRFEb7cdQn2-9a95zuqi28.woff') format('woff'), url('https://fonts.gstatic.com/s/beiruti/v4/JTUIjIU69Cmr9FGcYgRFEb7cdQn2-9a95zuqi2k.woff2') format('woff2'); }
-
-  </style>
-      
-    
+  <hr class="divider" />
 </body>
 </html>
